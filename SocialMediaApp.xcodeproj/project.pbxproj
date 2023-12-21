@@ -29,6 +29,9 @@
 		DD874FD92B3367C700975E0F /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FD82B3367C700975E0F /* CreateNewPost.swift */; };
 		DD874FDB2B3367EA00975E0F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FDA2B3367EA00975E0F /* Post.swift */; };
 		DD874FDD2B33860500975E0F /* SplashLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FDC2B33860500975E0F /* SplashLayer.swift */; };
+		DD874FE32B34230200975E0F /* ResuablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FE22B34230200975E0F /* ResuablePostView.swift */; };
+		DD874FE52B342E2400975E0F /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FE42B342E2400975E0F /* PostCardView.swift */; };
+		DD874FE72B344F2D00975E0F /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FE62B344F2D00975E0F /* SearchUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		DD874FD82B3367C700975E0F /* CreateNewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
 		DD874FDA2B3367EA00975E0F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DD874FDC2B33860500975E0F /* SplashLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLayer.swift; sourceTree = "<group>"; };
+		DD874FE22B34230200975E0F /* ResuablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResuablePostView.swift; sourceTree = "<group>"; };
+		DD874FE42B342E2400975E0F /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		DD874FE62B344F2D00975E0F /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			children = (
 				DD874FB62B32EEB900975E0F /* Model */,
 				DD874FB52B32EEAB00975E0F /* View */,
+				DD874FCD2B33183B00975E0F /* MainView.swift */,
 				DD874FB02B32EDEE00975E0F /* GoogleService-Info.plist */,
 				DD874FA22B32EC5700975E0F /* SocialMediaAppApp.swift */,
 				DD874FA42B32EC5700975E0F /* ContentView.swift */,
@@ -110,10 +117,10 @@
 		DD874FB52B32EEAB00975E0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD874FDF2B34226900975E0F /* Main */,
+				DD874FDE2B34221D00975E0F /* ResuableViews */,
 				DD874FCA2B3317CA00975E0F /* Helpers */,
-				DD874FC72B33173B00975E0F /* MainView */,
 				DD874FC62B33173300975E0F /* Login */,
-				DD874FC42B33106100975E0F /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,25 +150,51 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		DD874FC72B33173B00975E0F /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				DD874FCD2B33183B00975E0F /* MainView.swift */,
-				DD874FCF2B331A6900975E0F /* ProfileView.swift */,
-				DD874FD12B331A9600975E0F /* PostsView.swift */,
-				DD874FD32B3321C900975E0F /* ReusableProfileContent.swift */,
-				DD874FD82B3367C700975E0F /* CreateNewPost.swift */,
-			);
-			path = MainView;
-			sourceTree = "<group>";
-		};
 		DD874FCA2B3317CA00975E0F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DD874FC42B33106100975E0F /* LoadingView.swift */,
 				DD874FCB2B3317DE00975E0F /* View+Extensions.swift */,
 				DD874FDC2B33860500975E0F /* SplashLayer.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DD874FDE2B34221D00975E0F /* ResuableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DD874FD32B3321C900975E0F /* ReusableProfileContent.swift */,
+				DD874FE22B34230200975E0F /* ResuablePostView.swift */,
+			);
+			path = ResuableViews;
+			sourceTree = "<group>";
+		};
+		DD874FDF2B34226900975E0F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DD874FE12B3422A200975E0F /* Posts */,
+				DD874FE02B34229200975E0F /* Profile */,
+				DD874FE62B344F2D00975E0F /* SearchUserView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DD874FE02B34229200975E0F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DD874FCF2B331A6900975E0F /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DD874FE12B3422A200975E0F /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				DD874FD82B3367C700975E0F /* CreateNewPost.swift */,
+				DD874FD12B331A9600975E0F /* PostsView.swift */,
+				DD874FE42B342E2400975E0F /* PostCardView.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,14 +284,17 @@
 				DD874FCE2B33183B00975E0F /* MainView.swift in Sources */,
 				DD874FD42B3321C900975E0F /* ReusableProfileContent.swift in Sources */,
 				DD874FDB2B3367EA00975E0F /* Post.swift in Sources */,
+				DD874FE72B344F2D00975E0F /* SearchUserView.swift in Sources */,
 				DD874FBA2B32EF2400975E0F /* LoginView.swift in Sources */,
 				DD874FA52B32EC5700975E0F /* ContentView.swift in Sources */,
 				DD874FCC2B3317DE00975E0F /* View+Extensions.swift in Sources */,
+				DD874FE52B342E2400975E0F /* PostCardView.swift in Sources */,
 				DD874FC92B33175000975E0F /* RegisterView.swift in Sources */,
 				DD874FC52B33106100975E0F /* LoadingView.swift in Sources */,
 				DD874FDD2B33860500975E0F /* SplashLayer.swift in Sources */,
 				DD874FD22B331A9600975E0F /* PostsView.swift in Sources */,
 				DD874FD92B3367C700975E0F /* CreateNewPost.swift in Sources */,
+				DD874FE32B34230200975E0F /* ResuablePostView.swift in Sources */,
 				DD874FA32B32EC5700975E0F /* SocialMediaAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

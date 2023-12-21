@@ -11,6 +11,8 @@ import SDWebImageSwiftUI
 struct ReusableProfileContent: View {
     var user: User
     
+    @State private var ferchedPosts: [Post] = []
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack {
@@ -19,6 +21,7 @@ struct ReusableProfileContent: View {
                         Image("NullProfile")
                             .resizable()
                     }
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100)
                     .clipShape(Circle())
@@ -48,6 +51,8 @@ struct ReusableProfileContent: View {
                     .foregroundColor(.black)
                     .hAlign(.leading)
                     .padding(.vertical, 15)
+                
+                ReusablePostView(basedOnUID: true,uid: user.userUID, posts: $ferchedPosts)
             }
             .padding(15)
         }
