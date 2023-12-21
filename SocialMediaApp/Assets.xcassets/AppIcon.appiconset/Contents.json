@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "io7-isome-icon-P.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

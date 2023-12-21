@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
-struct SocialMediaAppApp: App {
+struct SocialMediaApp: App {
+    init(){
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
