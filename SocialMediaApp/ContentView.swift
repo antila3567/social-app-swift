@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("log_status") var logStatus: Bool = true
-    @State private var isLoading: Bool = true
+    @State private var isLoading: Bool = false
     
     var body: some View {
-        ZStack {
-            if isLoading {
-                splashView
-            } else {
-                app
-            }
+        if isLoading {
+            splashView
+        } else {
+            app
         }
     }
+    
     
     private var splashView: some View {
         Color.black

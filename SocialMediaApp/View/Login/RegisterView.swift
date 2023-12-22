@@ -59,8 +59,7 @@ struct RegisterView: View {
             }
             .font(.callout)
             .vAlign(.bottom)
-        }
-        .vAlign(.top)
+        }        .vAlign(.top)
         .padding(15)
         .overlay(content: {
             LoadingView(show: $isLoading)
@@ -83,6 +82,7 @@ struct RegisterView: View {
             }
         }
         .alert(errorMessage, isPresented: $showError , actions: {})
+        .background(AppBackgroundView())
     }
     
     @ViewBuilder

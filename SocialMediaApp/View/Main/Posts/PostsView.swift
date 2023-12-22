@@ -28,6 +28,7 @@ struct PostsView: View {
                         }
                         .padding(15)
                     }
+                    .background(AppBackgroundView())
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             NavigationLink {

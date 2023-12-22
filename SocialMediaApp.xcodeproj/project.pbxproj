@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3D73A42B35943500483C85 /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D73A32B35943500483C85 /* AppBackgroundView.swift */; };
+		DD3D73A62B359A3900483C85 /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D73A52B359A3900483C85 /* PostDetails.swift */; };
+		DD3D73A82B35B61200483C85 /* TabStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D73A72B35B61200483C85 /* TabStateScrollView.swift */; };
 		DD874FA32B32EC5700975E0F /* SocialMediaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FA22B32EC5700975E0F /* SocialMediaAppApp.swift */; };
 		DD874FA52B32EC5700975E0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD874FA42B32EC5700975E0F /* ContentView.swift */; };
 		DD874FA72B32EC5800975E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD874FA62B32EC5800975E0F /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD3D73A32B35943500483C85 /* AppBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
+		DD3D73A52B359A3900483C85 /* PostDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
+		DD3D73A72B35B61200483C85 /* TabStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabStateScrollView.swift; sourceTree = "<group>"; };
 		DD874F9F2B32EC5700975E0F /* SocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD874FA22B32EC5700975E0F /* SocialMediaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaAppApp.swift; sourceTree = "<group>"; };
 		DD874FA42B32EC5700975E0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,7 +102,6 @@
 			children = (
 				DD874FB62B32EEB900975E0F /* Model */,
 				DD874FB52B32EEAB00975E0F /* View */,
-				DD874FCD2B33183B00975E0F /* MainView.swift */,
 				DD874FB02B32EDEE00975E0F /* GoogleService-Info.plist */,
 				DD874FA22B32EC5700975E0F /* SocialMediaAppApp.swift */,
 				DD874FA42B32EC5700975E0F /* ContentView.swift */,
@@ -118,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DD874FDF2B34226900975E0F /* Main */,
+				DD874FCD2B33183B00975E0F /* MainView.swift */,
 				DD874FDE2B34221D00975E0F /* ResuableViews */,
 				DD874FCA2B3317CA00975E0F /* Helpers */,
 				DD874FC62B33173300975E0F /* Login */,
@@ -156,6 +162,8 @@
 				DD874FC42B33106100975E0F /* LoadingView.swift */,
 				DD874FCB2B3317DE00975E0F /* View+Extensions.swift */,
 				DD874FDC2B33860500975E0F /* SplashLayer.swift */,
+				DD3D73A32B35943500483C85 /* AppBackgroundView.swift */,
+				DD3D73A72B35B61200483C85 /* TabStateScrollView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -174,7 +182,6 @@
 			children = (
 				DD874FE12B3422A200975E0F /* Posts */,
 				DD874FE02B34229200975E0F /* Profile */,
-				DD874FE62B344F2D00975E0F /* SearchUserView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -190,9 +197,11 @@
 		DD874FE12B3422A200975E0F /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				DD874FE62B344F2D00975E0F /* SearchUserView.swift */,
 				DD874FD82B3367C700975E0F /* CreateNewPost.swift */,
 				DD874FD12B331A9600975E0F /* PostsView.swift */,
 				DD874FE42B342E2400975E0F /* PostCardView.swift */,
+				DD3D73A52B359A3900483C85 /* PostDetails.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -281,14 +290,17 @@
 			files = (
 				DD874FC32B33076000975E0F /* User.swift in Sources */,
 				DD874FD02B331A6900975E0F /* ProfileView.swift in Sources */,
+				DD3D73A62B359A3900483C85 /* PostDetails.swift in Sources */,
 				DD874FCE2B33183B00975E0F /* MainView.swift in Sources */,
 				DD874FD42B3321C900975E0F /* ReusableProfileContent.swift in Sources */,
 				DD874FDB2B3367EA00975E0F /* Post.swift in Sources */,
 				DD874FE72B344F2D00975E0F /* SearchUserView.swift in Sources */,
 				DD874FBA2B32EF2400975E0F /* LoginView.swift in Sources */,
 				DD874FA52B32EC5700975E0F /* ContentView.swift in Sources */,
+				DD3D73A82B35B61200483C85 /* TabStateScrollView.swift in Sources */,
 				DD874FCC2B3317DE00975E0F /* View+Extensions.swift in Sources */,
 				DD874FE52B342E2400975E0F /* PostCardView.swift in Sources */,
+				DD3D73A42B35943500483C85 /* AppBackgroundView.swift in Sources */,
 				DD874FC92B33175000975E0F /* RegisterView.swift in Sources */,
 				DD874FC52B33106100975E0F /* LoadingView.swift in Sources */,
 				DD874FDD2B33860500975E0F /* SplashLayer.swift in Sources */,

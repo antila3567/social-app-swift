@@ -32,6 +32,7 @@ struct ProfileView: View {
                 }
             }
             .navigationTitle("My profile")
+            .background(AppBackgroundView())
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu {
@@ -98,11 +99,5 @@ struct ProfileView: View {
             showError.toggle()
             isLoading = false
         })
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

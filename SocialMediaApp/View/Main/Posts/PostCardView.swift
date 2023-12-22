@@ -18,6 +18,7 @@ struct PostCardView: View {
     
     @AppStorage("user_UID") private var userUID: String = ""
     @State private var docListener: ListenerRegistration?
+    @State private var isPostDetailsPresented: Bool = false
     
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
@@ -39,24 +40,29 @@ struct PostCardView: View {
                     .padding(.vertical, 8)
                 
                 if let postImageURL = post.imageURL {
-                    GeometryReader {
-                        let size = $0.size
-                        WebImage(url: postImageURL)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: size.width, height: size.height)
-                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    }
-                    .frame(height: 200)
+                        GeometryReader {
+                            let size = $0.size
+                            WebImage(url: postImageURL)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: size.width, height: size.height)
+                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        }
+                        .frame(height: 200)
                 }
                 PostInteraction()
             }
         }
         .hAlign(.leading)
         .overlay(alignment: .topTrailing, content: {
-            if post.userUID == userUID {
                 Menu {
-                    Button("Delete post", role: .destructive, action: deletePost)
+                    if post.userUID == userUID {
+                        Button("Delete post", role: .destructive, action: deletePost)
+                    }
+                    
+                    Button("Open post") {
+                        isPostDetailsPresented.toggle()
+                    }
                 } label: {
                     Image(systemName: "ellipsis")
                         .font(.caption)
@@ -66,8 +72,15 @@ struct PostCardView: View {
                         .contentShape(Rectangle())
                 }
                 .offset(x: 8)
-            }
         })
+        .sheet(isPresented: $isPostDetailsPresented) {
+            if let postID = post.id {
+                PostDetails(
+                    postId: Binding.constant(postID),
+                    isPresented: $isPostDetailsPresented
+                )
+            }
+        }
         .onAppear {
             if docListener == nil {
                 guard let postID = post.id else { return }
@@ -95,6 +108,7 @@ struct PostCardView: View {
             }
         }
     }
+  
     
     @ViewBuilder
     func PostInteraction()-> some View {
@@ -168,6 +182,3 @@ struct PostCardView: View {
     }
 }
 
-
-//joTcVxwDDSazrIHEoeZNgz8p1Sa22023-12-21 09:29:39
-//joTcVxwDDSazrIHEoeZNgz8p1Sa22023-12-21 09:29:39

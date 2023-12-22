@@ -35,11 +35,11 @@ struct LoginView: View {
             VStack(spacing: 12) {
                 TextField("Email", text: $emailID)
                     .textContentType(.emailAddress)
-                    .border(1, .gray.opacity(0.8))
+                    .border(1, .black)
                     .padding(.top, 25)
                 SecureField("Password", text: $password)
                     .textContentType(.emailAddress)
-                    .border(1, .gray.opacity(0.8))
+                    .border(1, .black)
                 Button("Reset password?", action: resetPassword)
                     .font(.callout)
                     .fontWeight(.medium)
@@ -75,6 +75,7 @@ struct LoginView: View {
             RegisterView()
         }
         .alert(errorMessage, isPresented: $showError , actions: {})
+        .background(AppBackgroundView())
     }
     
     func loginUser() {
@@ -123,7 +124,6 @@ struct LoginView: View {
             isLoading = false
         })
     }
-    
 }
 
 struct LoginView_Previews: PreviewProvider {
